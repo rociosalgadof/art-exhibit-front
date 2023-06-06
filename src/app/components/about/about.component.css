@@ -1,0 +1,131 @@
+#section1About, #section1Gallery{
+    margin-top: 70px;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1044&q=80");
+}
+
+#section1Gallery > .container > .subcontainer > .firstContainerAbout > button{
+    width: 120%;
+}
+
+#section5About > div > .contacts:hover{
+    transition: all 0.25s ease-in-out;
+    color: #f76161;
+    cursor: pointer;
+}
+
+.firstContainerAbout {
+    padding-top: 50px;
+    height: 101vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    max-width: 340px;
+}
+
+.firstContainerAbout > h2 {
+    margin-bottom: 17px;
+}
+
+.firstContainerAbout > h2, .firstContainerAbout > h3{
+    font-size: 34px;
+        color: rgb(139, 136, 136);
+        font-family: Nixie One, cursive;
+        font-weight: 400;
+        line-height: 1.4;
+        fill: #2f2f2f;
+        letter-spacing: 0em;
+}
+
+.firstContainerAbout > h3{
+font-weight: bold;
+margin-top: 17px;
+}
+
+.firstContainerAbout > p{
+    color:  grey;
+    font-family: Scope One, serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8em;
+    letter-spacing: 0em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.artCollectionAbout > p{
+    color: #000000;
+    font-family: Scope One, serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8em;
+    letter-spacing: 0em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.artCollectionAbout{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.artCollectionAbout > h2, .artCollectionAbout > p{
+    text-align: center;
+}
+
+.artCollectionAbout > p:nth-of-type(1){
+    margin-bottom: 50px;
+}
+
+#section5About > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section5About{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section5About > div > p{
+    color: white;
+}
+
+#section5About > div > svg{
+    margin-top: 20px;
+    fill: white;
+} 
+
+.secondPicWrapperAbout{
+    height: 740px;
+
+}
+
+@media (min-width: 992px) { 
+    .subAbout{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #section5About{
+        flex-direction: row;
+    }
+
+    #section5About > div{
+        width: 265px;
+    }
+}
+
+

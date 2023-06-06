@@ -1,0 +1,16 @@
+#carouselExampleSlidesOnly{
+    width: 1111px;
+}
+
+#slider-container{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-slider-edit{
+    position: absolute;
+    z-index: 10;
+    width: 25%;
+    top: 10px;
+    left: 30px;
+}

@@ -1,0 +1,65 @@
+<main *ngIf="profile">
+    <header>
+        <div class="container">
+          <div class="subcontainer">
+            <app-navbar></app-navbar>
+          </div>
+        </div>
+      </header>
+      <section id="section1" class="backgroundImg" [style.background-image]=profile.home.headerBackgroundImg>
+        <div class="container">
+            <div class="subcontainer">
+            <div class="firstContainer">
+                <div class="titleContainer">
+                    <h2><span>this is rociosalgado</span></h2>
+                    <h3 id="sub-to-change">{{profile.home.subtitle}}</h3>
+                    <button class="changes" id="sub-changer">Edit subtitle</button>
+                    <button class="changes" id="background-img-home">Edit background picture</button>
+                </div>
+            </div>
+        </div>
+        </div>
+      </section>
+      <div class="wrapperContainer">
+        <div class="oddPicWrapper">
+      <section id="section2" class="artCollection">
+        <h2>{{profile.home.listOfProjects[0].title}}</h2>
+        <button class="changes">Edit title</button>
+        <p>{{profile.home.listOfProjects[0].subtitle}}</p>
+        <button class="changes changes-sub">Edit subtitle</button>
+        <button><a routerLink="/gallery">View</a></button>
+      </section>
+      <section id="section3" class="pictures">
+        <button class="changes gallery-bgn-pic gallery-slider-edit" id="home-project-img">Edit picture</button>
+        <img [src]=profile.home.listOfProjects[0].image alt="">
+      </section>
+    </div>
+    <div class="evenPicWrapper">
+      <section id="section2" class="artCollection">
+        <h2>{{profile.home.listOfProjects[1].title}}</h2>
+        <button class="changes">Edit title</button>
+        <p>{{profile.home.listOfProjects[1].subtitle}}</p>
+        <button class="changes changes-sub">Edit subtitle</button>
+        <button><a routerLink="/gallery">View</a></button>
+      </section>
+      <section id="section3" class="pictures">
+        <button class="changes gallery-bgn-pic gallery-slider-edit" id="home-project-img">Edit picture</button>
+        <img [src]=profile.home.listOfProjects[1].image alt="">
+      </section>
+    </div>
+    </div>
+      <section id="section5" class="background backgroundImg" [style.background-image]=profile.home.backstoryBackgroundImg>
+        <h2>Backstory</h2>
+        <p>Learn more about rociosalgado</p>
+        <button routerLink="/about">Adventure starts here</button>
+        <button class="changes" id="background-img-home">Edit background picture</button>
+      </section>
+      <section id="section6" class="backgroundImg" [style.background-image]=profile.home.gotAProjectBackgroundImg>
+        <h2>Got a Project?</h2>
+        <a routerLink="/contact" id="getInTouch">Get in touch</a>
+        <button class="changes" id="background-img-getInTouch">Edit background picture</button>
+      </section>
+      <app-footer></app-footer>
+</main>
+
+

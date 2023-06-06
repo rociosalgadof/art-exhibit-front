@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+.changes, #section5About > div > #bottom-gallery-img, #section5About > div > #changes-linkedIn, #section1About > .container > .subcontainer > .firstContainerAbout > button, #section5 > #background-img-home, .wrapperContainer > .oddPicWrapper > .artCollection > .changes, .wrapperContainer > .evenPicWrapper > .artCollection > .changes{
+    width: 15%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 13px;
+    font-family: revert;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: unset;
+}
+
+.changes:hover, .wrapperContainer > .oddPicWrapper > .artCollection > .changes:hover, .wrapperContainer > .evenPicWrapper > .artCollection > .changes:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+.wrapperContainer > .oddPicWrapper > .artCollection > .changes, .wrapperContainer > .evenPicWrapper > .artCollection > .changes{
+    width: 40%;
+}
+
+#section1About > .container > .subcontainer > .firstContainerAbout > .changes {
+    width: 46%;
+}
+
+#background-img-home{
+    width: 25%;
+}
+
+#background-img-getInTouch, #section5 > #background-img-home{
+    width: 17%;
+}
+
+#section5 > #background-img-home{
+    margin-bottom: 50px;
+}
+
+.changes-p, .changes-pp{
+    width: 40%;
+}
+
+.changes-d{
+width: 48%;}
+
+.wrapperContainer > .oddPicWrapper > .artCollection > .changes-sub, .wrapperContainer > .evenPicWrapper > .artCollection > .changes-sub{
+    margin-bottom: 40PX;
+}
+
+#background-img-getInTouch{
+    margin-top: 90px;
+}
+
+#section5About > div > #changes-linkedIn{
+    width: 83%;
+}
+
+#section1About > .container > .subcontainer > .firstContainerAbout > .gallery-bgn-pic{
+    width: 140%;
+}
+
+#section5About > div > #bottom-gallery-img{
+    width: 90%;
+}
+
+#home-project-img{
+    position: absolute;
+    z-index: 10;
+}
+
+
+
+
+
+
