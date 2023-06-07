@@ -1,0 +1,63 @@
+#apiHomeMain{
+    top:0;
+    background-image: url("https://images.unsplash.com/photo-1499892477393-f675706cbe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+.container > .subcontainer > .homeApiContainer{
+    height: 100vh;
+}
+
+
+.container > .subcontainer > .contactContainer > .imgApiHome{
+    height: 100vh;
+}
+
+.imgApiHome{
+    background-image: url("https://images.unsplash.com/photo-1444065707204-12decac917e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainApiHome{
+    top:0;
+}
+
+#apiHomeButton{
+    width: 40%;
+    margin-top: 50px;
+}
+
+.apiHomeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.innerContainer{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.apiHomeText{
+    font-family: 'Nixie One', cursive;
+    font-size: 34px;
+    font-weight: 400;
+    color: white;
+}
+
+.loginApi{
+    color: white;
+    margin-top: 30px;
+}
+
+.loginApi > a {
+    text-decoration: underline;
+}

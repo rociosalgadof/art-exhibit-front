@@ -1,0 +1,11 @@
+#signupButton{
+    width: 135px;
+}
+
+.loginApi{
+    margin-top: 30px;
+}
+
+.loginApi > a {
+    text-decoration: underline;
+}

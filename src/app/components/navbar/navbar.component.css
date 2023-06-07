@@ -1,3 +1,6 @@
 .active{
     color: #f76161;
   }
+.logoutButton{
+  text-decoration: underline;
+}

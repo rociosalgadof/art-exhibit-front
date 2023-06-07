@@ -14,6 +14,11 @@ import { ProjectComponent } from './components/project/project.component';
 import { ProfileService } from './services/profile.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/auth/login/login.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { ApiHomeComponent } from './components/api/api.home/api.home.component';
+import { ApiNavbarComponent } from './components/api/api.navbar/api.navbar.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +30,16 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     GalleryComponent,
     FooterComponent,
-    ProjectComponent
+    ProjectComponent,
+    LoginComponent,
+    SignupComponent,
+    ApiHomeComponent,
+    ApiNavbarComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

@@ -11,13 +11,13 @@
             <div class="subcontainer subAbout">
             <div class="firstContainerAbout">
                 <h2>Meet</h2>
-                <h3>Rocio</h3>
+                <h3>{{profile.owner}}</h3>
                 <p>{{profile.about.description[0].text}}</p>
-                <div><button class="changes changes-p">Edit paragraph</button><button class="changes changes-d">Delete paragraph</button></div>
+                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button class="changes changes-p">Edit paragraph</button><button class="changes changes-d">Delete paragraph</button></div>
                 <p>{{profile.about.description[1].text}}</p>
-                <div><button class="changes changes-p">Edit paragraph</button><button class="changes changes-d">Delete paragraph</button></div>
+                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button class="changes changes-p">Edit paragraph</button><button class="changes changes-d">Delete paragraph</button></div>
                 <p>{{profile.about.description[2].text}}</p>
-                <div><button class="changes changes-p">Edit pharagraph</button><button class="changes changes-d">Delete pharagraph</button></div>
+                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button class="changes changes-p">Edit pharagraph</button><button class="changes changes-d">Delete pharagraph</button></div>
             </div>
         </div>
         </div>
@@ -26,27 +26,31 @@
     <div class="oddPicWrapper secondPicWrapperAbout">
       <section id="section4" class="artCollectionAbout artCollection">
         <h2>{{profile.about.middleSection[0].title}}</h2>
-        <button class="changes">Edit title</button>
-        <p id="p-hover1">{{profile.about.middleSection[0].description}}<br> <button class="changes changes-pp">Edit paragraph</button></p>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes">Edit title</button>
+        <p id="p-hover1">{{profile.about.middleSection[0].description}}
+          <br> <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes changes-pp">Edit paragraph</button>
+        </p>
         <h2>{{profile.about.middleSection[1].title}}</h2>
-        <button class="changes">Edit title</button>
-        <p id="p-hover2">{{profile.about.middleSection[1].description}}<br> <button class="changes changes-pp">Edit paragraph</button> </p>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes">Edit title</button>
+        <p id="p-hover2">{{profile.about.middleSection[1].description}}
+          <br> <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes changes-pp">Edit paragraph</button> 
+        </p>
       </section>
     </div>
     </div>
     <section id="section5About" class="background backgroundImg" [style.background-image]=profile.about.contactInfoBackgroundImg>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="30"><path d="M277 777h275v-60H277v60Zm0-171h406v-60H277v60Zm0-171h406v-60H277v60Zm-97 501q-24 0-42-18t-18-42V276q0-24 18-42t42-18h600q24 0 42 18t18 42v600q0 24-18 42t-42 18H180Zm0-60h600V276H180v600Zm0-600v600-600Z"/></svg>
-        <p class="contacts" routerLink="/gallery">View Germaine's Works</p>
+        <p class="contacts" routerLink="/gallery">View {{profile.owner}} Works</p>
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 1 16 16"><path d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg>
-        <p class="contacts" ><a [attr.href]=profile.about.linkedIn>Connect with Germaine</a></p>
-        <button class="changes" id="changes-linkedIn">Edit LinkedIn link</button>
+        <p class="contacts" ><a [attr.href]=profile.about.linkedIn>Connect with {{profile.owner}}</a></p>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes" id="changes-linkedIn">Edit LinkedIn link</button>
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="30"><path d="M306 533q17 0 28.5-11.5T346 493q0-17-11.5-28.5T306 453q-17 0-28.5 11.5T266 493q0 17 11.5 28.5T306 533Zm177 0q17 0 28.5-11.5T523 493q0-17-11.5-28.5T483 453q-17 0-28.5 11.5T443 493q0 17 11.5 28.5T483 533Zm170 0q17 0 28.5-11.5T693 493q0-17-11.5-28.5T653 453q-17 0-28.5 11.5T613 493q0 17 11.5 28.5T653 533ZM80 976V236q0-23 18-41.5t42-18.5h680q23 0 41.5 18.5T880 236v520q0 23-18.5 41.5T820 816H240L80 976Zm60-145 75-75h605V236H140v595Zm0-595v595-595Z"/></svg>
-        <p class="contacts" routerLink="/contact">Contact Germaine</p>
+        <p class="contacts" routerLink="/contact">Contact {{profile.owner}}</p>
       </div>
     </section>
     <app-footer></app-footer>

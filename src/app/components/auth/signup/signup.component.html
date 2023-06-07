@@ -1,0 +1,38 @@
+<main>
+    <header>
+        <div class="container">
+          <div class="subcontainer">
+            <app-navbar></app-navbar>
+          </div>
+        </div>
+      </header>
+      <div class="contactContainer">
+        <div class="imgContactContainer" src="https://images.unsplash.com/photo-1444065707204-12decac917e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="formContact">
+          <form (ngSubmit)="signup()" [formGroup]="registerForm" class="contactFormElement">
+                <div class="nameContainer formElements">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Name..." formControlName="name" id="name"/>
+                </div>
+                <div class="emailContainer formElements">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email..." formControlName="email" id="email"/>
+                </div>
+                <div class="subjectContainer formElements">
+                <label for="password">Password</label>
+                <input
+                type="password"
+                placeholder="Password..."
+                formControlName="password"
+                id="password"
+              />
+              </div>
+              <button type="submit" [disabled]="registerForm.invalid" class="contactFormSubmit" id="signupButton">Register</button>
+              <p class="loginApi">Already have an account? <a routerLink="/api/login">Log In.</a></p>
+            </form>
+        </div>
+      </div>
+      <app-footer></app-footer>
+</main>

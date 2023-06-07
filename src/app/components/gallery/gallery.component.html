@@ -10,7 +10,7 @@
         <div class="container">
         <div class="subcontainer subAbout">
           <div class="firstContainerAbout">
-          <button class="changes gallery-bgn-pic">Edit background picture</button>
+          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic">Edit background picture</button>
         </div>
         </div>
         </div>
@@ -19,7 +19,7 @@
     <div class="oddPicWrapper secondPicWrapperAbout" id="slider-container">
       <section id="section4" class="artCollectionAbout artCollection">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <button class="changes gallery-bgn-pic gallery-slider-edit">Add pictures</button>
+          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic gallery-slider-edit">Add pictures</button>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img [src]=profile.gallery.listOfImages[0].image class="d-block w-100" alt="...">
@@ -37,7 +37,7 @@
     </div>
     <section id="section5About" class="background backgroundImg" [style.background-image]=profile.gallery.footerImage>
       <div>
-        <button class="changes gallery-bgn-pic" id="bottom-gallery-img">Edit background picture</button>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic" id="bottom-gallery-img">Edit background picture</button>
       </div>
     </section>
     <app-footer></app-footer>
