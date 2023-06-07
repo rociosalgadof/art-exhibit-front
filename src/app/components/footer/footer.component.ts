@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfileInterface } from 'src/app/interfaces/profile-inteface';
 import { ProfileService } from 'src/app/services/profile.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ import { ProfileService } from 'src/app/services/profile.service';
 })
 export class FooterComponent {
   profile: ProfileInterface;
-  constructor(private profileService: ProfileService){
+  constructor(private profileService: ProfileService, private activatedRoute: ActivatedRoute){
     this.profile = this.profileService.profile;
   }
 
@@ -18,7 +19,8 @@ export class FooterComponent {
   }
 
   getProfile(): void {
-    this.profileService.getProfile().subscribe({
+    const id: number = this.activatedRoute.snapshot.params["id"];
+    this.profileService.getProfile(id).subscribe({
       next: (data) => {
         this.profile = data;
       },

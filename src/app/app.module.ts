@@ -19,6 +19,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { ApiHomeComponent } from './components/api/api.home/api.home.component';
 import { ApiNavbarComponent } from './components/api/api.navbar/api.navbar.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ApiNavbarComponent } from './components/api/api.navbar/api.navbar.compo
     SignupComponent,
     ApiHomeComponent,
     ApiNavbarComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

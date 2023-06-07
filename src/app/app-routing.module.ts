@@ -15,9 +15,9 @@ const routes:Routes=[
   {path:"api/login", component: LoginComponent},
   {path:"api", component: ApiHomeComponent},
   {path:"api/signup", component: SignupComponent},
-  {path: "about", component: AboutComponent}, 
-  {path:"gallery", component: GalleryComponent}, 
-  {path: "contact", component: ContactComponent}, 
+  {path: "profile/:id/about", component: AboutComponent}, 
+  {path:"profile/:id/gallery", component: GalleryComponent}, 
+  {path: "profile/:id/contact", component: ContactComponent}, 
   {path: "**", component: ErrorComponent}];
 
 @NgModule({

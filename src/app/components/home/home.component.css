@@ -85,7 +85,6 @@ main {
     transition: all 0.25s ease-in-out;
     margin-top: 70px;
     height: 100vh;  
-    background-image: url("https://images.unsplash.com/photo-1606821061030-9eedf225857b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1327&q=80");
   }
   
   .firstContainer{

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.changes, #section5About > div > #bottom-gallery-img, #section5About > div > #changes-linkedIn, #section1About > .container > .subcontainer > .firstContainerAbout > button, #section5 > #background-img-home, .wrapperContainer > .oddPicWrapper > .artCollection > .changes, .wrapperContainer > .evenPicWrapper > .artCollection > .changes{
+.changes, #section5About > #btnContainer > #lastEditButton, #aboutImg, #section5About > div > #bottom-gallery-img, #section5About > div > #changes-linkedIn, #section1About > .container > .subcontainer > .firstContainerAbout > button, #section5 > #background-img-home, .wrapperContainer > .oddPicWrapper > .artCollection > .changes, .wrapperContainer > .evenPicWrapper > .artCollection > .changes{
     width: 15%;
     background-color: black;
     border: none;
@@ -17,7 +17,30 @@
     font-size: unset;
 }
 
-.changes:hover, .wrapperContainer > .oddPicWrapper > .artCollection > .changes:hover, .wrapperContainer > .evenPicWrapper > .artCollection > .changes:hover{
+#section5About > #btnContainer > #lastEditButton{
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+
+#section5About > #btnContainer {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    left: 100px;
+}
+
+#aboutImg {
+    position: absolute;
+    top: 785px;
+    color: white;
+    left: 20px;
+    width: 15%;
+}
+
+.changes:hover, #section5About > div > #bottom-gallery-img:hover, #section5About > #btnContainer > #lastEditButton:hover, #aboutImg:hover, .wrapperContainer > .oddPicWrapper > .artCollection > .changes:hover, .wrapperContainer > .evenPicWrapper > .artCollection > .changes:hover, #section5 > #background-img-home:hover, #section5About > div > #changes-linkedIn:hover{
     background-color: lightgray;
     color: black;
 }

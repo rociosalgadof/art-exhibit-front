@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, retry } from 'rxjs';
 import { ProfileInterface } from '../interfaces/profile-inteface';
 import { HttpHeaders } from '@angular/common/http';
+import { EnquiryInterface } from '../interfaces/enquiry-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,19 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
 
-  getProfile():Observable<any> {
-    return this.http.get<any>(`${this.API_URL}/profile/1`);
+  getProfile(id: number):Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/profile/${id}`);
+  }
+
+  editProfile(id: number, body: ProfileInterface): Observable<any> {
+    const options = {
+      headers: this.getAuthHeader(),
+    };
+    return this.http.put<any>(`${this.API_URL}/profile/${id}/edit`, body, options);
+  }
+
+  createEnquiry(id: number, body: EnquiryInterface): Observable<any> {
+    return this.http.post<any>(`${this.API_URL}/profile/${id}/enquiry`, body);
   }
 
   private getAuthHeader(): HttpHeaders {

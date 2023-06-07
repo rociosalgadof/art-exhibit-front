@@ -6,11 +6,11 @@
           </div>
         </div>
       </header>
-      <section id="section1Gallery" class="backgroundImg" [style.background-image]=profile.gallery.headerBackgroundImg>
+      <section id="section1Gallery" class="backgroundImg" [style.background-image]='"url(\"" + profile.gallery.headerBackgroundImg + "\")"'>
         <div class="container">
         <div class="subcontainer subAbout">
           <div class="firstContainerAbout">
-          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic">Edit background picture</button>
+          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic" (click)="changeHeaderBackgroundImg()">Edit background picture</button>
         </div>
         </div>
         </div>
@@ -19,25 +19,21 @@
     <div class="oddPicWrapper secondPicWrapperAbout" id="slider-container">
       <section id="section4" class="artCollectionAbout artCollection">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic gallery-slider-edit">Add pictures</button>
+          <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic gallery-slider-edit" (click)="addImagesToSlidder()">Add pictures</button>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img [src]=profile.gallery.listOfImages[0].image class="d-block w-100" alt="...">
+            <div *ngFor="let image of profile.gallery.listOfImages; let i = index">
+            <div [ngClass]="{'carousel-item':true, 'active': i===0 }">
+              <img [src]=image.image class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-              <img [src]=profile.gallery.listOfImages[1].image class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img [src]=profile.gallery.listOfImages[2].image class="d-block w-100" alt="...">
-            </div>
+          </div>
           </div>
         </div>
       </section>
     </div>
     </div>
-    <section id="section5About" class="background backgroundImg" [style.background-image]=profile.gallery.footerImage>
+    <section id="section5About" class="background backgroundImg" [style.background-image]='"url(\"" + profile.gallery.footerImage + "\")"'>
       <div>
-        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic" id="bottom-gallery-img">Edit background picture</button>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic" id="bottom-gallery-img" (click)="changeFooterBackgroundImg()">Edit background picture</button>
       </div>
     </section>
     <app-footer></app-footer>

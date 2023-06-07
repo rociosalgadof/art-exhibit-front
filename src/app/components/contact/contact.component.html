@@ -7,23 +7,23 @@
         </div>
       </header>
       <div class="contactContainer">
-        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes changes-sub" id="contact-edit-button">Edit background picture</button>
-        <div class="imgContactContainer" [style.background-image]=profile.contact.backgroundImage>
+        <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes changes-sub" id="contact-edit-button" (click)="changeHeaderBackgroundImg()">Edit background picture</button>
+        <div class="imgContactContainer" [style.background-image]='"url(\"" + profile.contact.backgroundImage + "\")"'>
             <h1>Contact {{profile.owner}}</h1>
         </div>
         <div class="formContact">
-            <form action="" class="contactFormElement">
+            <form action="" class="contactFormElement" (ngSubmit)="submitEnquiry()" [formGroup]="contactForm">
                 <div class="nameContainer formElements">
                 <label for="name">Name *</label>
-                <input type="text" id="name">
+                <input type="text" id="name" formControlName="name">
                 </div>
                 <div class="emailContainer formElements">
                 <label for="email">Email *</label>
-                <input type="email" id="email">
+                <input type="email" id="email" formControlName="email">
                 </div>
                 <div class="categoryContainer formElements">
                 <label for="category">Category *</label>
-                <select name="category" id="category">
+                <select name="category" id="category" formControlName="category">
                     <option value="business">Business Enquiry</option>
                     <option value="art">Art related Enquiry</option>
                     <option value="photography">Photography related Enquiry</option>
@@ -32,13 +32,13 @@
                 </div>
                 <div class="subjectContainer formElements">
                 <label for="subject">Subject *</label>
-                <input type="text" id="subject">
+                <input type="text" id="subject" formControlName="subject">
                 </div>
                 <div class="messageContainer formElements">
                 <label for="message">Message *</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" formControlName="message"></textarea>
                 </div>
-                <button class="contactFormSubmit">Submit</button>
+                <button class="contactFormSubmit" [disabled]="contactForm.invalid">Submit</button>
             </form>
         </div>
       </div>

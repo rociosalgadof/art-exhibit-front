@@ -24,8 +24,77 @@ export class HomeComponent implements OnInit{
     this.profileId = JSON.parse(localStorage.getItem("profileId") as string);
   }
 
+  changeSubtitle():void{
+    let subtitle = prompt ('Enter subtitle:');
+    if(subtitle!==null){
+      this.profile.home.subtitle = subtitle;
+      this.edit(); 
+    }
+  }
+
+  changeProjectTitle(index:number):void{
+    let title = prompt ('Enter title:');
+    if(title!==null){
+      this.profile.home.listOfProjects[index].title = title;
+      this.edit(); 
+    }
+  }
+
+  changeProjectImage(index:number):void{
+    let image = prompt ('Enter new image:');
+    if(image!==null){
+      this.profile.home.listOfProjects[index].image = image;
+      this.edit(); 
+    }
+  }
+
+  changeProjectSubtitle(index:number):void{
+    let subtitle = prompt ('Enter subtitle:');
+    if(subtitle!==null){
+      this.profile.home.listOfProjects[index].subtitle = subtitle;
+      this.edit(); 
+    }
+  }
+
+  changeHeaderBackgroundImg():void{
+    let bgPic = prompt ('New background picture:');
+    if(bgPic!==null){
+      this.profile.home.headerBackgroundImg = bgPic;
+      this.edit(); 
+    }
+  }
+
+  changeBackstoryImg():void{
+    let bgPic = prompt ('New background picture:');
+    if(bgPic!==null){
+      this.profile.home.backstoryBackgroundImg = bgPic;
+      this.edit(); 
+    }
+  }
+
+  changeGetInTouchImg():void{
+    let bgPic = prompt ('New background picture:');
+    if(bgPic!==null){
+      this.profile.home.gotAProjectBackgroundImg = bgPic;
+      this.edit(); 
+    }
+  }
+
+  edit():void{
+    this.profileService.editProfile(this.profile.id, this.profile).subscribe({
+      next: (data) => {
+        this.profile = data;
+        this.getProfile();
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
+
   getProfile(): void {
-    this.profileService.getProfile().subscribe({
+    const id: number = this.activatedRoute.snapshot.params["id"];
+    this.profileService.getProfile(id).subscribe({
       next: (data) => {
         this.profile = data;
         if( this.profileId == this.profile.id){
