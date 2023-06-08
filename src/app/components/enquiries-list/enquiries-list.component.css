@@ -29,7 +29,16 @@
   .description {
     white-space: wrap;
   }
+
+  .pEnquiries{
+    font-size: 2em;
+  }
   
+  .enquiryForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .wrap {
     display: flex;

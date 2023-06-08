@@ -9,3 +9,11 @@
 .loginApi > a {
     text-decoration: underline;
 }
+
+.formElements > p{
+    width: 600px;
+}
+
+.formElements > p > span{
+    color: lightgray;
+}

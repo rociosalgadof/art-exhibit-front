@@ -48,7 +48,6 @@ export class LoginComponent implements OnInit{
           this.authService.authenticate().subscribe({
             next: (userData: User) => {
               // Store user data in local storage
-              console.log(userData);
               localStorage.setItem("currentUser", JSON.stringify(userData.name));
               localStorage.setItem("profileId", JSON.stringify(userData.profileId));
               // Redirect to home page

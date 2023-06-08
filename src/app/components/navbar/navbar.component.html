@@ -7,7 +7,7 @@
       <span><a routerLink="/profile/{{profile.id}}/gallery" routerLinkActive="active">gallery</a></span>
       <span><a routerLink="/profile/{{profile.id}}/contact" routerLinkActive="active">contact</a></span>
       <span><a routerLink="/api" routerLinkActive="active" *ngIf="!name">api</a></span>
-      <span><a routerLink="/profile/{{profile.id}}/enquiry" routerLinkActive="active" *ngIf="name">enquiries</a></span>
+      <span><a routerLink="/profile/{{profile.id}}/enquiry" routerLinkActive="active" *ngIf="name">enquiry</a></span>
       <span><a [routerLink]="['/profile', profile.id]" *ngIf="name" (click)="logout()" class="logoutButton">logout</a></span>
     </div>
 </nav>

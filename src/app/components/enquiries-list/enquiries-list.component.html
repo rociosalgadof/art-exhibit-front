@@ -8,10 +8,11 @@
       </header>
       <div class="contactContainer">
         <div class="imgContactContainer" [style.background-image]='"url(\"" + profile.contact.backgroundImage + "\")"'>
-            <h1>Enquiries</h1>
+            <h1>Enquiry</h1>
         </div>
-        <div class="formContact">
+        <div class="formContact enquiryForm">
             <div class="wrap">
+                <p *ngIf="!enquiryList.length" class="pEnquiries">No worries! You don't have any enquiry at the moment.. </p>
                 <div class="box" *ngFor="let enquiry of enquiryList">
                     <div class="box-top">
                       <img class="box-image" src="https://t3.ftcdn.net/jpg/03/39/45/96/360_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg" alt="Girl Eating Pizza">

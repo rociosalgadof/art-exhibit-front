@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileService } from 'src/app/services/profile.service';
 import { ProfileInterface } from 'src/app/interfaces/profile-inteface';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit{
   profileId!: any | null;
   name!: string | null;
   profile: ProfileInterface;
-  constructor(private profileService: ProfileService, private activatedRoute: ActivatedRoute){
+  constructor(private profileService: ProfileService, private activatedRoute: ActivatedRoute, private router: Router){
     this.profile = this.profileService.profile;
   }
 
@@ -102,7 +103,7 @@ export class HomeComponent implements OnInit{
         }
       },
       error: (error) => {
-        console.log(error);
+        this.router.navigate([`notfound`]);
       },
     });
   }
