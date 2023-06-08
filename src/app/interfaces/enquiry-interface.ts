@@ -1,4 +1,5 @@
 export interface EnquiryInterface {
+    id:number;
     name: string;
     email: string;
     category: string;

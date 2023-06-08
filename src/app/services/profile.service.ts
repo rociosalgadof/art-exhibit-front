@@ -31,6 +31,20 @@ export class ProfileService {
     return this.http.post<any>(`${this.API_URL}/profile/${id}/enquiry`, body);
   }
 
+  deleteEnquiry(profileId:number, enquiryId:number): Observable<any> {
+    const options = {
+      headers: this.getAuthHeader(),
+    };
+    return this.http.delete<any>(`${this.API_URL}/profile/${profileId}/enquiry/${enquiryId}`, options);
+  }
+
+  getAllEnquiries(id: number):Observable<EnquiryInterface[]>{
+    const options = {
+      headers: this.getAuthHeader(),
+    };
+    return this.http.get<EnquiryInterface[]>(`${this.API_URL}/profile/${id}/enquiry`, options);
+  }
+
   private getAuthHeader(): HttpHeaders {
     // Get the token from the local storage
     const token: string | null = localStorage.getItem("authToken");

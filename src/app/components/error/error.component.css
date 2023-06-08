@@ -2,6 +2,10 @@
 @media (min-width: 1400px){
     .errorContainer > .imgContactContainer {
         justify-content: flex-start;
-        height: 25vh;
+        height: 70vh;
     }
+}
+
+.errorContainer > .errorBottomContainer{
+    height: 200px;
 }

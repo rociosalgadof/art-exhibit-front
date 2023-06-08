@@ -10,7 +10,6 @@ import { ErrorComponent } from './components/error/error.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProjectComponent } from './components/project/project.component';
 import { ProfileService } from './services/profile.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
@@ -20,6 +19,7 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { ApiHomeComponent } from './components/api/api.home/api.home.component';
 import { ApiNavbarComponent } from './components/api/api.navbar/api.navbar.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { EnquiriesListComponent } from './components/enquiries-list/enquiries-list.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +31,12 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     NavbarComponent,
     GalleryComponent,
     FooterComponent,
-    ProjectComponent,
     LoginComponent,
     SignupComponent,
     ApiHomeComponent,
     ApiNavbarComponent,
     SpinnerComponent,
+    EnquiriesListComponent,
   ],
   imports: [
     BrowserModule,

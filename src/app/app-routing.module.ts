@@ -9,6 +9,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { ApiHomeComponent } from './components/api/api.home/api.home.component';
+import { EnquiriesListComponent } from './components/enquiries-list/enquiries-list.component';
 
 const routes:Routes=[
   {path: "profile/:id", component: HomeComponent}, 
@@ -18,6 +19,7 @@ const routes:Routes=[
   {path: "profile/:id/about", component: AboutComponent}, 
   {path:"profile/:id/gallery", component: GalleryComponent}, 
   {path: "profile/:id/contact", component: ContactComponent}, 
+  {path: "profile/:id/enquiry", component: EnquiriesListComponent},
   {path: "**", component: ErrorComponent}];
 
 @NgModule({

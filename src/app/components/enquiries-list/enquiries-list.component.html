@@ -1,0 +1,30 @@
+<main>
+    <header>
+        <div class="container">
+          <div class="subcontainer">
+            <app-navbar></app-navbar>
+          </div>
+        </div>
+      </header>
+      <div class="contactContainer">
+        <div class="imgContactContainer" [style.background-image]='"url(\"" + profile.contact.backgroundImage + "\")"'>
+            <h1>Enquiries</h1>
+        </div>
+        <div class="formContact">
+            <div class="wrap">
+                <div class="box" *ngFor="let enquiry of enquiryList">
+                    <div class="box-top">
+                      <img class="box-image" src="https://t3.ftcdn.net/jpg/03/39/45/96/360_F_339459697_XAFacNQmwnvJRqe1Fe9VOptPWMUxlZP8.jpg" alt="Girl Eating Pizza">
+                      <div class="title-flex">
+                        <h3 class="box-title">{{enquiry.subject}}</h3>
+                        <p class="user-follow-info">{{enquiry.email}}</p>
+                      </div>
+                      <p class="description">{{enquiry.message}}</p>
+                    </div>
+                    <button class="button changes" (click)="deleteEnquiry(enquiry.id)">Delete</button>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <app-footer></app-footer>
+</main>

@@ -12,7 +12,7 @@
 
 #contact-edit-button {
     position: absolute;
-    bottom: 215px;
+    bottom: 330px;
     left: 195px;
 }
 
@@ -132,7 +132,7 @@ select .select {
     }
     .imgContactContainer{
         justify-content: flex-start;
-        height: 110vh;
+        height: 70vh;
     }
     .formElements > input, .formElements > textarea, .formElements > select{
         width: 600px;
