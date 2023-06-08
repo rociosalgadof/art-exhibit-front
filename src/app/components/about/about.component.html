@@ -16,9 +16,9 @@
                 <p *ngIf="profile.about.description[0]">{{profile.about.description[0].text}}</p>
                 <div *ngIf="isProfileOwnerAndIsLoggedIn"><button *ngIf="profile.about.description[0]" class="changes changes-p" (click)="editParagraph(0)">Edit paragraph</button><button *ngIf="profile.about.description[0]" class="changes changes-d" (click)="deleteParagraph(0)">Delete paragraph</button></div>
                 <p *ngIf="profile.about.description[1]">{{profile.about.description[1].text}}</p>
-                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button *ngIf="profile.about.description[1]" class="changes changes-p" (click)="editParagraph(1)">Edit paragraph</button><button *ngIf="profile.about.description[0]" class="changes changes-d" (click)="deleteParagraph(1)">Delete paragraph</button></div>
+                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button *ngIf="profile.about.description[1]" class="changes changes-p" (click)="editParagraph(1)">Edit paragraph</button><button *ngIf="profile.about.description[1]" class="changes changes-d" (click)="deleteParagraph(1)">Delete paragraph</button></div>
                 <p *ngIf="profile.about.description[2]">{{profile.about.description[2].text}}</p>
-                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button *ngIf="profile.about.description[2]" class="changes changes-p" (click)="editParagraph(2)">Edit pharagraph</button><button *ngIf="profile.about.description[0]" class="changes changes-d" (click)="deleteParagraph(2)">Delete pharagraph</button></div>
+                <div *ngIf="isProfileOwnerAndIsLoggedIn"><button *ngIf="profile.about.description[2]" class="changes changes-p" (click)="editParagraph(2)">Edit pharagraph</button><button *ngIf="profile.about.description[2]" class="changes changes-d" (click)="deleteParagraph(2)">Delete pharagraph</button></div>
             </div>
         </div>
         </div>

@@ -18,15 +18,23 @@
     <div class="wrapperContainer">
     <div class="oddPicWrapper secondPicWrapperAbout" id="slider-container">
       <section id="section4" class="artCollectionAbout artCollection">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" [style.width.px]="1109">
           <button *ngIf="isProfileOwnerAndIsLoggedIn" class="changes gallery-bgn-pic gallery-slider-edit" (click)="addImagesToSlidder()">Add pictures</button>
           <div class="carousel-inner">
             <div *ngFor="let image of profile.gallery.listOfImages; let i = index">
-            <div [ngClass]="{'carousel-item':true, 'active': i===0 }">
-              <img [src]=image.image class="d-block w-100" alt="...">
+              <div [ngClass]="{'carousel-item':true, 'active': i===0 }">
+                <img [src]=image.image class="d-block w-100" alt="...">
+              </div>
             </div>
           </div>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
     </div>
@@ -38,3 +46,4 @@
     </section>
     <app-footer></app-footer>
 </main>
+

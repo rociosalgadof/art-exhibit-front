@@ -27,6 +27,15 @@
     top:0;
 }
 
+.imgAndVideoContainer{
+    margin-bottom: 195px;
+    width: 640px;
+}
+
+.whiteArrowHome{
+    rotate: 32deg;
+}
+
 #apiHomeButton{
     width: 40%;
     margin-top: 50px;

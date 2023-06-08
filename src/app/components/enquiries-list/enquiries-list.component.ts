@@ -27,8 +27,7 @@ export class EnquiriesListComponent {
     const profileId: number = this.activatedRoute.snapshot.params["id"];
     this.profileService.deleteEnquiry(profileId, enquiryId).subscribe({
       next: (data) => {
-        console.log(data);
-        this.getProfile();
+        this.getAllEnquiries();
       },
       error: (error) => {
         console.log(error);
