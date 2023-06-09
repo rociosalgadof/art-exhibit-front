@@ -5,3 +5,7 @@
 .loginApi > a {
     text-decoration: underline;
 }
+
+#alertSignUp{
+    width: 600px;
+}

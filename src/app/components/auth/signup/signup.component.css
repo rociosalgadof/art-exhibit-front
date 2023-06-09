@@ -17,3 +17,7 @@
 .formElements > p > span{
     color: lightgray;
 }
+
+#alertSignUp{
+    width: 600px;
+}

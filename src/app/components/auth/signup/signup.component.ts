@@ -17,8 +17,10 @@ export class SignupComponent implements OnInit{
   nameInput: FormControl;
   emailInput: FormControl;
   passwordInput: FormControl;
+  isFormInvalid:boolean;
  
   constructor(private router: Router, private authService: AuthService) {
+    this.isFormInvalid=false;
     this.nameInput = new FormControl("", [Validators.required]);
     this.emailInput = new FormControl("", [
       Validators.required,
@@ -35,7 +37,13 @@ export class SignupComponent implements OnInit{
   ngOnInit(): void {}
 
   signup() {
-    this.authService
+    if (!this.registerForm.valid) {
+      this.isFormInvalid=true;
+      console.log(this.isFormInvalid);
+      console.log("chau");
+    }else{
+      console.log("hola")
+      this.authService
       .register(
         this.registerForm.value.name,
         this.registerForm.value.email,
@@ -43,6 +51,7 @@ export class SignupComponent implements OnInit{
       )
       .subscribe({
         next: (user: User) => {
+          this.isFormInvalid=true;
           // alert("Register successful");
           // console.log(user);
  
@@ -55,4 +64,5 @@ export class SignupComponent implements OnInit{
         },
       });
   }
+    }
 }

@@ -11,6 +11,7 @@
         </div>
         <div class="formContact">
           <form (ngSubmit)="signup()" [formGroup]="registerForm" class="contactFormElement">
+            <div class="alert alert-danger" role="alert" id="alertSignUp" *ngIf="isFormInvalid"> Please complete all the fields correctly—take a second look!</div>
                 <div class="nameContainer formElements">
                 <label for="name">Name</label>
                 <input type="text" placeholder="Name..." formControlName="name" id="name"/>
@@ -31,7 +32,7 @@
                 id="password"
               />
               </div>
-              <button type="submit" [disabled]="registerForm.invalid" class="contactFormSubmit" id="signupButton">Register</button>
+              <button type="submit" class="contactFormSubmit" id="signupButton">Register</button>
               <p class="loginApi">Already have an account? <a routerLink="/api/login">Log In.</a></p>
             </form>
         </div>

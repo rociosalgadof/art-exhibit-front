@@ -5,6 +5,7 @@ import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -16,8 +17,9 @@ export class LoginComponent implements OnInit{
   loginForm: FormGroup;
   emailInput: FormControl;
   passwordInput: FormControl;
+  previousUrl!:string;
  
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService, private location: Location) {
     this.emailInput = new FormControl("", [
       Validators.required,
       Validators.email,
@@ -30,7 +32,8 @@ export class LoginComponent implements OnInit{
     this.externalErrorMsg = "";
   }
  
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
  
   login() {
     // Attempt to login

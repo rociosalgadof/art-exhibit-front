@@ -11,6 +11,7 @@
         </div>
         <div class="formContact">
           <form (ngSubmit)="login()" [formGroup]="loginForm" class="contactFormElement">
+            <!-- <div class="alert alert-success" role="success" id="alertSignUp"> You have succesfully created your profile—congrats!</div> -->
               <div class="emailContainer formElements">
               <label for="email">Email</label>
               <input type="email" placeholder="Email..." formControlName="email" id="email"/>
