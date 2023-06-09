@@ -39,5 +39,9 @@ Here the artists that are interested in making their own portfolio can create th
 
 ![single-beer](https://res.cloudinary.com/dfcmuxqof/image/upload/v1686215673/The_api_pgexrc.png)
 
+### BACKEND REPOSITORY
+
+https://github.com/rociosalgadof/art-exhibit-back
 
 Created by: Rocío Salgado 🤓
+
